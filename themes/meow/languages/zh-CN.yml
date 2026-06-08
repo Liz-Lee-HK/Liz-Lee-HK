@@ -93,6 +93,7 @@ fiction:
 about:
   about_blog:
     title: 关于本站
+    # 博客关键词，以','分隔
     keywords: AI,LLM,Agent,RAG,大模型,八股,面试
     introduction: '- 这里是 Liz Lee 的个人博客，记录我在 AI / LLM Agent 领域的学习与项目。
 
