@@ -1,68 +1,36 @@
-//- sort posts by year and month descendingly 根据年份和月份降序排列文章
--
-  var postsSortByDate = {years:[], posts:{}};
-  for (post of page.posts.toArray()){
-    let postYear = post.date.year();
-    let postMonth = post.date.month();
+extends page.pug
 
-    if (!postsSortByDate.years.includes(postYear)){
-      postsSortByDate.years.push(postYear);
-    }
-
-    if (!postsSortByDate.posts[postYear]){
-      postsSortByDate.posts[postYear] = {months:[]};
-      //- postsSortByDate.posts[postYear] = {};
-    }
-
-    if (!postsSortByDate.posts[postYear][postMonth]){
-      postsSortByDate.posts[postYear].months.push(postMonth);
-      postsSortByDate.posts[postYear][postMonth] = [];
-    }
-
-    postsSortByDate.posts[postYear][postMonth].push(post);
-    //- console.log(postsSortByDate.posts[postYear].months);
-  }
-  //- postsSortByDate.posts[2024].months.sort((a, b) => a - b);
-  //- console.log(postsSortByDate);
-
-.page-container
-  .page-title
-    h1
-      if is_tag()
-        i.fa-solid.fa-tags
-        | #{ __('menu.tags') } : #{ page.tag }
-      else if is_category()
-        i.fa-regular.fa-folder-open
-        | #{ __('menu.category') } : #{ page.category }
-      else
-        i.fa-solid.fa-box-archive
-        | #{ __('menu.archives') }
-
-  .archives-container
-    //- sort by year 根据年份分类
-    - for (year of postsSortByDate.years)
-      - let year_list = postsSortByDate.posts[year]
-      - let url_year = url_for(config.archive_dir)+ '/' + year
-      .archives-year
-        a.archives-year-link(href= url_year)
-          | #{ year }
-          i.fa-solid.fa-paw
-        //- sort by month 根据月份分类
-        - for (month of year_list.months)
+block content
+  .archive-container
+    - const archiveList = getArchiveList()
+    - for (yearItem of archiveList)
+      - let yearLink = url_for(config.archive_dir)+ '/' + yearItem.year
+      .archive-year
+        .archive-year-title
+          a(href=yearLink)= yearItem.year
+          span= _p('posts_count', yearItem.yearNum)
+        - for (monthItem of yearItem.yearList)
           -
-            let temp_date = new Date();
-            temp_date.setMonth(month);
-            let month_name = date(temp_date,'MMMM');
-            let month_num = date(temp_date,'MM')
-          .archives-month
-            a.archives-month-link(href= url_year + '/' + month_num)
-              | #{ month_name }
-              i.fa-solid.fa-paw
-            //- list posts 列出文章
-            .archives-article-list
-              - for (article of year_list[month])
-                | !{ partial('_partial/article-item', {post: article}) }
-
-//- pagination 分页
-.pagination
-  | !{ partial('_partial/pagination', {page: page}) }
+            let monthVar = new Date().setMonth(monthItem.month);
+            let month_name = date(monthVar,'MMMM');
+            let month_full = date(monthVar,'MM');
+          .archive-month
+            .archive-month-title
+              a(href=yearLink + '/' + month_full)= month_name
+              span= _p('posts_count', monthItem.postList.length)
+            .archive-posts-list
+              - for (post of monthItem.postList)
+                - let cover = (post.thumbnail || (theme.archive.thumbnail && post.thumbnail == undefined)) && (post.cover || page.photo)
+                .archive-post(archive-style=cover ? "cover" : "normal")
+                  .archive-post-cover
+                    if cover
+                      img(src=url_for(post.cover || page.photo) alt='Post Cover')
+                  a(href=url_for(post.path))
+                    .archive-post-title
+                      if post.encrypt
+                        != getSvg('lock')
+                      span= post.title
+                    .archive-post-date= date(post.date)
+  
+  .page-paginator
+    != partial('components/paginator')

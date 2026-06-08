@@ -1,16 +1,49 @@
-# Hexo Theme Meow
+<div id="meow-lang" align="center">
 
 <b>Language: [简体中文](README.md) | English</b>
 
-**Meow** is a cute and bright Hexo theme. It optimizes the adaptability of original novel and fanfiction.
+</div>
 
-![Meow](https://chanwj.github.io/images/theme-preview.png)
+# Hexo Theme Meow
+
+**Meow** is a cute and responsive theme for Hexo.
+
+![Meow](https://jumao-zycs-img.pages.dev/v2/ifn8DUc.png)
+
+![Meow-img](https://jumao-zycs-img.pages.dev/v2/rMl9ITA.png)
 
 <br/>
 
 ## 😺 Theme Preview
 
-- **[Meow Preview Station](https://chanwj.github.io/)**
+- [Meow Preview Station](https://meow.jumaoo.top)
+
+<br/>
+
+## ⭐️ Features
+
+- Highly customizable configuration
+- Responsive design
+- Various tag plugins
+- Novel/Fanfition improvment
+- Card style archives page, sort by years and months
+- Hierarchical categories page
+- Essay page (Static/Dynamic Deploy)
+- Albums page (Lazyload waterfall)
+- Friend links page
+- Support TOC
+- Floating toolbar
+- Reward module
+- Light/Dark mode
+- Customizable theme color
+- Comment
+- Image lazyload + light box
+- Search function
+- Support i18n
+- Encryption adapted (Post/Album/Page)
+- Built-in 404 page
+- SEO friendly
+- Support building team blog (Articles can be signed by different authors or even multiple authors. When adding essay, different authors and avatars can also be specified.)
 
 <br/>
 
@@ -19,75 +52,38 @@
 Execute the following command in the root directory of the blog.
 
 ``` bash
-git clone -b v2.0 https://github.com/chanwj/hexo-theme-meow.git themes/meow
+git clone -b main https://github.com/chanwj/hexo-theme-meow.git themes/meow
 ```
 
 Modify the `_config. yml` file in the root directory. Set theme variable to `meow`.
 
-``` yml
+``` yaml
 theme: meow
 ```
 
-**Meow** uses Pug for rendering. Please install the Pug renderer in advance.
+*Meow* uses Pug for rendering. Please install the Pug renderer in advance.
 
 ``` bash
 npm install hexo-renderer-pug --save
 ```
 
-<br/>
-
-## 📚️ Documents
-
-- **[Meow Configuration Guide](https://chanwj.github.io/en/Meow-Theme-Guide/#Theme-Configuration)**
+Please update Hexo to version 7.0.0+.
 
 <br/>
 
-## ⭐️ Features
+## 📚️ Documentation
 
-- Fiction scaffold ( **[Meow Fiction Scaffold Introduction](https://chanwj.github.io/en/Meow-Theme-Guide/#Fiction-Scaffold)** )
-- Responsive design for small screen devices
-- Template for "About" page, supporting i18n
-- Card style archives pages, sort by years and months
-- Categories page that can show all hierarchies
-- Generate TOC for articles customizable
-- Provide various tag plugins: blockquote in different styles / link card / ...
-- Floating toolbar
-- Configurable reward module & credits module
-- Darkmode
-- Comment
-- Post encryption
-- Support for APlayer
-- Built-in 404 page
-- Integrate multiple function switches, highly customizable configuration
+- [Meow Docs](https://meow.jumaoo.top/posts/38ece08b/)
+- [Meow Migration Guide](https://meow.jumaoo.top/posts/7287f6a/)
 
 <br/>
 
-## 📋 Changelog
+## ⏳️ Maintenance and Updates
 
-Get the specific update content of each version, including new features, fixes and improvements.
+See changelog at [Releases](https://github.com/chanwj/hexo-theme-meow/releases) page or theme preview station.
 
-- **[Changelog](Changelog.md)**
+Theme Meow will be in a long-term update and maintenance state. If you encounter any problems while using it, feel free go to [GitHub Issues](https://github.com/chanwj/hexo-theme-meow/issues) to ask for help. (When asking questions, please describe the problem clearly and provide a method to reproduce the problem.)
 
-<br/>
+**If you like theme Meow, hope you could give it a ⭐ Star on this page to support this project.**
 
-## ⏳️ TO DO
-
-- [ ] More toolbar functions
-- [ ] Support for photos gallery
-- [ ] ...
-
-<br/>
-
-## 📢 Pronouncement
-
-*Meow* has been open-source and is available for anyone to download and use. If you encounter any issues or have suggestions during use, you can submit them as Issues in *Meow*'s Github repository or leave comments directly on the preview site.
-
-*Meow* also welcome all of you to participate in the development of this theme (either by submitting Pull Requests or contacting the author). Those who have made contributions will have their names listed on *Meow*'s Github homepage and in the credits list of the preview site.
-
-At the same time, *Meow* permits secondary creative modifications (Fork), provided that you **prominently indicate the original work (i.e., `hexo-theme-meow`) and the original author (i.e., chanwj/小橘猫) in your work, and retain the copyright and license notices from the original work**.
-
-If you need to use this theme, <u>**please retain the copyright information in the footer to show respect for the author and her creation**</u>, which can also help more people in need to know this theme. Thank you very much!
-
-Although *Meow* is an open source project, it does NOT mean that plagiarism by removing copyright information of the original work is permissible or acceptable. (If you want, welcome to introduce your website/secondary creation to the author. You can also apply to add a friend link to the preview site.)
-
-*If you think *Meow* is helpful, feel free to let the author know (leave comments or pay her a coffee), so that the author will be encouraged and more motivated to continue updating and maintaining *Meow* in the future.
+If you are willing to sponsor theme Meow and encourage the author, you could visit [Reward](https://meow.jumaoo.top/reward) page on theme preview station and scan the QR code. Thank you very much!

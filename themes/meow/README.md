@@ -1,16 +1,49 @@
-# Hexo Theme Meow
+<div id="meow-lang" align="center">
 
 <b>Language: 简体中文 | [English](README-EN.md)</b>
 
-**Meow**是一款可爱明亮的Hexo主题，尤其适用于发表文学作品，比如长篇小说、同人创作等等。
+</div>
 
-![Meow](https://chanwj.github.io/images/theme-preview.png)
+# Hexo Theme Meow
+
+**Meow**，一款简洁可爱的响应式 Hexo 主题。
+
+![Meow](https://jumao-zycs-img.pages.dev/v2/ifn8DUc.png)
+
+![Meow-img](https://jumao-zycs-img.pages.dev/v2/rMl9ITA.png)
 
 <br/>
 
 ## 😺 主题展示
 
-- **[Meow展示站](https://chanwj.github.io/)**
+- [Meow 主题专属网站](https://meow.jumaoo.top)
+
+<br/>
+
+## ⭐️ 主题特色
+
+- 高度自定义的配置
+- 响应式设计
+- 多样化的标签插件
+- 小说/同人作品适配优化
+- 按年份与月份归类的卡片式归档页面
+- 可显示层级的分类页面
+- 动态页（静态/动态部署）
+- 相册页（懒加载瀑布流）
+- 友链页
+- TOC 目录
+- 悬浮工具栏
+- 赞赏栏目
+- 浅色/深色模式
+- 自定义主题颜色
+- 评论区
+- 图片懒加载+图片灯箱
+- 搜索功能
+- 适配 i18n
+- 加密适配（文章/相册/页面）
+- 内置404页面
+- SEO 友好
+- 支持构建团队博客（文章可以署名不同作者/多个作者；发表动态时也能指定不同作者与头像）
 
 <br/>
 
@@ -19,75 +52,38 @@
 在博客根目录下执行以下指令，获取最新版主题。
 
 ``` bash
-git clone -b v2.0 https://github.com/chanwj/hexo-theme-meow.git themes/meow
+git clone -b main https://github.com/chanwj/hexo-theme-meow.git themes/meow
 ```
 
-修改博客根目录下的`_config.yml`配置文件，将主题更换为`meow`。
+修改博客根目录下的 `_config.yml` 配置文件，将主题更换为 `meow` 。
 
-``` yml
+``` yaml
 theme: meow
 ```
 
-本主题使用pug进行渲染，请提前安装pug渲染器。
+本主题使用 Pug 进行渲染，请提前安装 Pug 渲染器。
 
 ``` bash
 npm install hexo-renderer-pug --save
 ```
 
+请将 Hexo 版本升级至7.0.0以上。
+
 <br/>
 
 ## 📚️ 配置文档
 
-- **[Meow配置指南](https://chanwj.github.io/Meow-Theme-Guide/#主题配置指南)**
+- [Meow 主题文档](https://meow.jumaoo.top/posts/38ece08b/)
+- [Meow 版本迁移指南](https://meow.jumaoo.top/posts/7287f6a/)
 
 <br/>
 
-## ⭐️ 特色功能
+## ⏳️ 维护与更新
 
-- 小说模板 ( **[Meow小说模板介绍](https://chanwj.github.io/Meow-Theme-Guide/#小说模板)** )
-- 响应式设计，优化小屏设备显示效果
-- 支持i18n的“关于”页模板
-- 按年份与月份归类的卡片式归档页面
-- 可显示层级的分类目录页面
-- 可自定义生成文章TOC目录
-- 提供多样化的标签插件：不同风格的引用块/链接卡片/……
-- 装配悬浮工具栏
-- 可配置的赞赏栏目、致谢名单
-- 深色模式
-- 评论功能
-- 文章加密功能
-- 支持APlayer音乐播放器
-- 内置404页面
-- 集成多项功能开关，高度自定义的配置
+更新日志可以在[Releases](https://github.com/chanwj/hexo-theme-meow/releases)页面和主题展示站中查看。
 
-<br/>
+本主题将长期处于更新与维护状态，如果您在使用的过程中遇到问题，请在[GitHub Issues](https://github.com/chanwj/hexo-theme-meow/issues)上提问。（提问时请描述清楚问题并提供复现问题的方法）
 
-## 📋 更新日志
+**如果您喜欢Meow主题，或者Meow主题能够帮助到您，那么希望您能在本页面点一点右上角的⭐Star来支持这个项目～**
 
-快速获取各个版本的具体更新内容，包括新增功能、问题修复、优化项目。
-
-- **[Changelog](Changelog.md)**
-
-<br/>
-
-## ⏳️ TO DO
-
-- [ ] 更多工具栏功能
-- [ ] 图片画廊功能
-- [ ] ……
-
-<br/>
-
-## 📢 声明
-
-主题*Meow*已经开源，任何人都可以下载使用。如果在使用的过程中有任何问题或建议，您可以在*Meow*的Github仓库中提交Issues，或者直接在主题展示站中留言。
-
-也欢迎各位大神和同好参与建设这个主题（Pull Requests或联系作者），作出贡献的朋友，其名字会被列在*Meow*的Github主页与主题展示站的致谢名单中。
-
-同时，本主题允许进行二创修改（Fork），但前提是**您必须在二创成果中显著标出原作品（即`hexo-theme-meow`）以及原作者（即chanwj/小橘猫），并且保留原作品中的版权和许可声明**。
-
-如果您需要使用本主题，<u>**请保留页脚部分的主题版权信息，尊重作者与创作**</u>，此举同样可以帮助更多有需要的人了解本主题，非常感谢！
-
-虽然本主题是开源项目，但并不代表抹掉作品版权信息的剽窃行为是可以被允许和存在的。（如果您愿意的话，欢迎向原作者介绍您的网站/二创成果呀~也可以向作者申请在主题展示站中添加友链）
-
-*如果您因为本主题而得到了帮助，可以留言/打赏告知作者，这样作者也会受到鼓舞，更有动力进行后续的主题更新与维护~*
+如果您愿意赞助Meow主题、愿意鼓励作者，欢迎到主题展示站中的[🎁致谢名单](https://meow.jumaoo.top/reward)页面扫码赞赏，非常感谢！

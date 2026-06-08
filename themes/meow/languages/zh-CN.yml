@@ -1,117 +1,100 @@
-# 导航栏菜单项显示值
-menu:
-  archives: 归档
-  category: 分类
-  categories: 分类
-  tags: 标签
-  about: 关于
-  关于: 关于
-  项目集: 项目集
-  随手记: 随手记
-  学习笔记: 学习笔记
-  search: 搜索
-  home: 主页
-  toc: 目录
-  settings: 设置
-  comment: 评论
-  darkmode: 深色模式
-  font_size_increase: 放大字体
-  font_size_decrease: 缩小字体
+# 顶部导航栏
+home: 主页
+articles: 文章
+archives: 归档
+categories: 分类
+tags: 标签
+about: 关于
+项目集: 项目集
+随手记: 随手记
+学习笔记: 学习笔记
+site: 本站
+author: 作者
+essay: 动态
+links: 链接
+albums: 相册集
+bookmarks: 书签页
+friends: 友情链接
+comments: 留言
+search: 搜索
+toggle: 打开菜单
 
-# 网站信息
-# 此处的配置仅影响页内展示，不影响网页meta
-blog_info:
-  title: Liz Lee
-  subtitle: AI / LLM Agent Engineer-in-training · HKU
-  description: 大模型 / Agent 八股复盘 · 项目集 · 随手记 · 学习笔记
+# 工具栏
+toc: 目录
+setting: 设置
+go_to_top: 返回顶部
+dark_mode: 深色模式
+font_size_plus: 放大字体
+font_size_minus: 缩小字体
+copy: 复制
+share: 分享
 
-# 文章相关显示值
-article:
-  read_more: 阅读全文
-  word_count: 全文约%s字
-  copyright: 版权声明
-  copyright_desc: 署名-非商业性使用-禁止演绎 4.0
-  # 关于文章赞赏支持的说明，支持Markdown语法
-  reward: 如果您喜欢这篇文章，欢迎赞赏支持作者，谢谢&#128151;
-  previous_post: 上一篇文章
-  next_post: 下一篇文章
-  top: '&#x1F4CC;**置顶**' # 支持Markdown语法
+# 搜索相关
+search_fn:
+  tips: 请输入关键词进行站内搜索……
 
-# 导航相关
-navigation:
-  back_to_top: 返回顶部
-  back_to_home: 返回首页
-  menu_toggle: 打开菜单
+# 文章
+read_more: 阅读全文
+posts_count: "(%s篇文章)"
+sticky: 置顶
+pubdate: 发表于%s
+update: 更新于%s
+wordcount: "总字数: %s字"
+readtime: "阅读时长: %s分钟"
+post_author: "作者: %s"
+prev_post: 上一篇
+next_post: 下一篇
 
-# 分页相关显示值
-pagination:
-  prev: 上一页
-  next: 下一页
+# 侧边栏
+announcement: 公告
 
-# 日期时间相关显示值
-datetime:
-  published: 发布日期
-  updated: 更新日期
-
-# 404页面相关
-page_not_found:
-  tips: 此页面不存在
-
-# 搜索面板相关
-search:
-  tips: 请输入需要搜索的内容……
-  result_count: 匹配结果数
-  no_result: 未搜索到匹配的文章。
+#页脚
+footer:
+  runtime: 🌻已稳定运行.年.月.天
+  framework: 🚀本站由 %s 强力驱动
+  site_statistic: 共撰写%s篇文章，全站共%s字
 
 # 访问量统计
 page_view:
-  site_pv: 总访问量
-  site_uv: 总访客数
-  post_pv: 阅读次数
+  site_pv: 🔥总访问量
+  site_uv: 🐈访客人数
+  page_pv: 访问量
 
-# fiction类型的文章相关显示值
-fiction:
-  meta:
-    type: 类型
-    fandom: 原型
-    relationship: 关系
-    character: 角色
-    rating: 分级
-    warning: 预警
-  status:
-    complete: 完结
-    in_progress: 未完待续
-  summary: 简介
-  notes: 作者的话
-  rating:
-    General: 全年龄
-    Teen: 青少年及以上
-    Mature: 成人向
-    Explicit: 限制级
+# 社交信息
+social:
+  email: 电子邮箱
+  github: GitHub
+  qq: QQ
+  wechat: 微信
+  ao3: Archive of Our Own
+  bilibili: Bilibili
+  facebook: Facebook
+  instagram: Instagram
+  tiktok: TikTok
+  weibo: 微博
+  x: X
+  mastodon: Mastodon
+  steam: Steam
+  xiaohongshu: 小红书
 
-# “关于”页面相关显示值
-about:
-  about_blog:
-    title: 关于本站
-    # 博客关键词，以','分隔
-    keywords: AI,LLM,Agent,RAG,大模型,八股,面试
-    introduction: '- 这里是 Liz Lee 的个人博客，记录我在 AI / LLM Agent 领域的学习与项目。
+# 说说
+essay_max_num: "- 只展示最近%s条说说 -"
 
-    - 内容包括大模型八股复盘、论文笔记、项目实战和日常随写。
+# 相册
+album_img_num: "- 共有...张图片 -"
 
-    - 本站基于 [Hexo](https://hexo.io/) 搭建，使用 [hexo-theme-meow](https://github.com/chanwj/hexo-theme-meow) 主题。'
-    supplement: '&#127775;<u>感谢 [chanwj](https://github.com/chanwj) 制作的主题，**请保留页脚部分的主题版权信息**，尊重作者与创作。</u>'
-  about_author:
-    title: 关于作者
-    description: HKU 在读，AI / LLM Agent 工程师预备役。写八股也写代码，偶尔随手记。
-  about_contact: 联系方式
-  about_links: 其他链接
-  reward:
-    title: 赞赏
-    # 关于赞赏支持的说明，支持Markdown语法
-    description: 如果这个主题对您有帮助，欢迎扫码赞赏作者~各位的鼓励与支持是我持续创作的动力，谢谢&#128151;
-  credits:
-    title: 致谢
-    # 致谢词，支持Markdown语法
-    description: '感谢这些朋友的大力支持～比心&#128149;<br/><span style="font-size: 16px; color: grey">注：字体加粗=重要贡献，下划线=打赏支持</span>'
+# 赞赏栏目
+reward: 赞赏作者
+reward_list: 致谢名单
 
+# 版权相关
+copyright:
+  info: "本作品由 %s 于 %s 发布"
+  link: "作品地址："
+  text: "除特别声明外，本站作品均采用 %s 许可协议，转载请注明来自 %s"
+  notify_info: 复制成功～转载请标注本文地址
+  F12_info: 开发者模式已打开，请遵循本站版权协议
+
+# 其他项
+error_page_text: 页面失踪了_(:з」∠)_
+loading: 正在加载中……

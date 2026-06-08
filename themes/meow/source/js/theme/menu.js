@@ -1,23 +1,33 @@
-function openTopMenu() {
-  'use strict';
-  var hiddenMenu = document.getElementById('top-menu-hidden');
-  if (hiddenMenu.getAttribute('menu-show')) {
-    hiddenMenu.removeAttribute('menu-show')
-    hiddenMenu.style.display = 'none';
-  } else {
-    hiddenMenu.setAttribute('menu-show', true);
-    hiddenMenu.style.display = 'flex';
-  }
-}
+/* 
+ * hexo theme meow
+ * menu (header) scripts
+ */
 
-function closeTopMenu() {
-  'use strict';
-  var hiddenMenu = document.getElementById('top-menu-hidden');
-  if (hiddenMenu.getAttribute('menu-show')) {
-    hiddenMenu.removeAttribute('menu-show')
-    hiddenMenu.style.display = 'none';
+const initMenu = () => {
+  const headerElement = document.querySelector('header');
+  const scroll_y = window.scrollY || window.pageYOffset || document.body.scrollTop;
+  const bg_color = document.body.getAttribute('data-mode') == 'light' ? 'rgba(255,255,255,0.8)' : 'rgba(45, 45, 45, 0.85)';
+  let new_color = 'transparent';
+  if (scroll_y < (window.innerHeight * 0.6)) {
+    headerElement.setAttribute('custom', '');
   } else {
-    hiddenMenu.setAttribute('menu-show', true);
-    hiddenMenu.style.display = 'flex';
+    headerElement.removeAttribute('custom');
+    new_color = bg_color;
   }
-}
+  requestAnimationFrame(() => {
+    headerElement.style.background = new_color;
+  });
+
+  const menuAside = document.getElementById('menu-aside');
+  document.getElementById('menu-btn').addEventListener('click', function () {
+    menuAside.setAttribute("open", "");
+  });
+
+  menuAside.addEventListener('click', event => {
+    if (event.target === menuAside) {
+      menuAside.removeAttribute('open');
+    }
+  });
+};
+
+export default initMenu;
