@@ -13,7 +13,7 @@ info:
   # Site Logo
   logo: assets/images/Hexo-Theme-MEOW.png
   # Author Avatar
-  avatar: 
+  avatar: assets/images/avatar.jpg
   # Datetime of when this website was built
   start_date: 2026-06-08 00:00:00 # Format should be as same as date_format and time_format of root config
 
